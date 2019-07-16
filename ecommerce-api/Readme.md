@@ -61,4 +61,10 @@ et lancer la commande suivante:
 
 php bin/console doctrine:fixtures:load
 
+Installer le server Apache:
+composer req symfony/web-server-bundle --dev
+
+et le lancer
+php bin/console server:run
+
 
