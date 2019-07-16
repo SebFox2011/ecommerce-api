@@ -1,14 +1,19 @@
 # Site ecommerce API
+Installé sous PHP Storm
 
 ## paramétrage du projet
-Créer un fichier .env.local
-> # Configure your db driver and server_version in config/packages/doctrine.yaml
+Créer un fichier .env.local et y renseigner les bonnes informations
+de la base de donnée:
+> Configure your db driver and server_version in config/packages/doctrine.yaml
   DATABASE_URL=mysql://root:root@127.0.0.1:8889/ecommerce
+
+lancer ensuite les commandes suivantes:
 
 composer create-project symfony/skeleton ecommerce-api
 cd ecommerce-api
 composer req api
 
+## Création de la base de données
 php bin/console doctrine:database:create
 
 composer require symfony/maker-bundle --dev
@@ -45,3 +50,15 @@ composer req migrations
 php bin/console make:migration
 
 php bin/console doctrine:migrations:migrate
+
+Fin de l'installation de la base
+
+## Gestion fixtures
+composer require --dev doctrine/doctrine-fixtures-bundle
+
+Ajouter les DataFixtures dans AppFixtures.php
+et lancer la commande suivante:
+
+php bin/console doctrine:fixtures:load
+
+
