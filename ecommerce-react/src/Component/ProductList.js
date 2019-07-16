@@ -11,7 +11,7 @@ class ProductList extends Component {
 
     //Appel à l'api
     componentDidMount() {
-        fetch('http://127.0.0.1:8000/api/products')
+        fetch(process.env.REACT_APP_API + 'products')
             .then(response => response.json())
             .then(data => this.setState({products: data["hydra:member"]}))
     }

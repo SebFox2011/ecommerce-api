@@ -7,8 +7,8 @@ class ProductThumb extends Component {
 
         return (
             <div>
-                <img src={"http://127.0.0.1:8000/uploads/" + product.picture} alt="Image du produit"/>
-                {product.name}
+                <img src={process.env.REACT_APP_UPLOADS + product.picture} alt="Image du produit"/>
+                <h3>{product.name}</h3>
                 <p>Prix: {product.price} €</p>
             </div>
         );
