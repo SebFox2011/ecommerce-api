@@ -1,6 +1,10 @@
 # Site ecommerce API
 
 ## paramétrage du projet
+Créer un fichier .env.local
+> # Configure your db driver and server_version in config/packages/doctrine.yaml
+  DATABASE_URL=mysql://root:root@127.0.0.1:8889/ecommerce
+
 composer create-project symfony/skeleton ecommerce-api
 cd ecommerce-api
 composer req api
@@ -10,4 +14,34 @@ php bin/console doctrine:database:create
 composer require symfony/maker-bundle --dev
 
 php bin/console make:entity
+ >Product
+ >Mark this class as an API Platform resource (expose a CRUD API for it) 
+    Yes (ajouter a CRUD API)
+ >New property name (press <return> to stop adding fields):
+    name string 255 no
+    picture string 255 yes
+    price decimal 10 2 no
+    description text yes
+    
+php bin/console make:entity    
+    >Category
+     >Mark this class as an API Platform resource (expose a CRUD API for it) 
+        Yes (ajouter a CRUD API)
+    > New property name  label
+    string 255 no
+    
+php bin/console make:entity 
+    product
+   >New property name : category
+   type relation avec Category ManyToOne
+   Is the Product.category property allowed to be null (nullable)? no
+    Do you want to add a new property to Category so that you can access/update Product objects from it yes
+    A new property will also be added to the Category class so that you can access the related Product objects from it. No
 
+New field name inside Category [products]: Product
+Do you want to automatically delete orphaned App\Entity\Product objects (orphanRemoval)? NO
+
+composer req migrations
+php bin/console make:migration
+
+php bin/console doctrine:migrations:migrate
