@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ProductThumb from "./ProductThumb";
 
 class ProductList extends Component {
     constructor(props) {
@@ -16,9 +17,11 @@ class ProductList extends Component {
     }
 
     render() {
+        const productThumbs = this.state.products.map(product => <ProductThumb product={product}/>);
+
         return (
             <div className="Product-list">
-                
+                {productThumbs}
             </div>
         );
     }
