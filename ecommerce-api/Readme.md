@@ -1,5 +1,10 @@
 # Site ecommerce API
 Installé sous PHP Storm
+Utilise API Plateform : https://api-platform.com/
+autres exemples d'API
+    https://swapi.co/
+    https://any-api.com/
+    https://apilist.fun/
 
 ## paramétrage du projet
 Créer un fichier .env.local et y renseigner les bonnes informations
@@ -61,10 +66,14 @@ et lancer la commande suivante:
 
 php bin/console doctrine:fixtures:load
 
+## Lancement du projet
 Installer le server Apache:
 composer req symfony/web-server-bundle --dev
 
 et le lancer
 php bin/console server:run
+
+Aller sur cette url:
+http://127.0.0.1:8000/api pour créer la documentation de l'api
 
 
