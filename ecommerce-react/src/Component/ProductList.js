@@ -17,7 +17,7 @@ class ProductList extends Component {
     }
 
     render() {
-        const productThumbs = this.state.products.map(product => <ProductThumb product={product}/>);
+        const productThumbs = this.state.products.map(product => <ProductThumb key={product.id} product={product}/>);
 
         return (
             <div className="Product-list">

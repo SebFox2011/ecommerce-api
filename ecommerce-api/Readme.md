@@ -77,3 +77,8 @@ Aller sur cette url:
 http://127.0.0.1:8000/api pour créer la documentation de l'api
 
 
+Paramétrer avec l'url du server de prod au lieu de localhost:
+###> nelmio/cors-bundle ###
+CORS_ALLOW_ORIGIN=^https?://localhost(:[0-9]+)?$
+###< nelmio/cors-bundle ###
+
