@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ProductThumb from "./ProductThumb";
+import "./ProductList.scss"
 
 class ProductList extends Component {
     constructor(props) {

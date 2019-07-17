@@ -10,3 +10,5 @@ npm start
 3 connecter le fichier ProductList à l'API
 4 creer un fichier .env pour gérer les variables globales d'environnement et ne pas
 oublier de relancer le server npm
+5 npm install node-sass pour avoir acces sass
+6 ajout de scss sur ProductThumb et ProductList
