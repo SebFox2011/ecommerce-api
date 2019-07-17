@@ -13,10 +13,14 @@ oublier de relancer le server npm
 5 npm install node-sass pour avoir acces sass
 6 ajout de scss sur ProductThumb et ProductList
 7 ajout des catégories pour chaque produit
+8 ajout des boutons + et - pour ajouter / supprimer du panier
 
 
 ## instalation de react-router
 
 https://reacttraining.com/react-router/web/guides/quick-start
 npm i react-router-dom
+
+Pour utiliser BrowserRouter
+
 
