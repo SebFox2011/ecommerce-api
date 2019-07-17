@@ -4,6 +4,7 @@ import ProductList from "./Component/ProductList";
 import Cart from "./Component/Cart"
 import {Route} from "react-router-dom";
 import Homepage from "./Component/Homepage";
+import MainMenu from "./Component/MainMenu";
 
 
 class App extends Component {
@@ -49,6 +50,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <MainMenu/>
                 <Route path="/" exact component={Homepage}/>
                 <Route path="/Products" render={() =>
                     <ProductList addToCart={cartProducts => this.addToCart(cartProducts)}/>}/>
