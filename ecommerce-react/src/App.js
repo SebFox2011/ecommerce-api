@@ -5,6 +5,7 @@ import Cart from "./Component/Cart"
 import {Route} from "react-router-dom";
 import Homepage from "./Component/Homepage";
 import MainMenu from "./Component/MainMenu";
+import Product from "./Component/Product";
 
 
 class App extends Component {
@@ -52,13 +53,16 @@ class App extends Component {
             <div className="App">
                 <MainMenu/>
                 <Route path="/" exact component={Homepage}/>
-                <Route path="/Products" render={() =>
+
+                <Route path="/products" exact render={() =>
                     <ProductList addToCart={cartProducts => this.addToCart(cartProducts)}/>}/>
-                <Route path="/Products" render={() =>
+
+                <Route path="/products/:id" component={Product}/>
+
+                <Route path="/products" render={() =>
                     <Cart products={this.state.cartProducts}
                           addToCart={product => this.addToCart(product)}
-                          removeFromCart={product => this.removeFromCart(product)}
-                    />}/>
+                          removeFromCart={product => this.removeFromCart(product)}/>}/>
 
             </div>
         );
