@@ -23,4 +23,7 @@ npm i react-router-dom
 
 Pour utiliser BrowserRouter
 
-
+## installation de bootstrap
+npm install bootstrap
+npm install jquery
+npm install popper.js
