@@ -21,7 +21,8 @@ class ProductListFilter extends Component {
             );
         return (
             <form>
-                <select>
+                <select onChange={event => this.props.onChange(event)}>
+                    <option value="">Toutes les catégories</option>
                     {categoryOptions}
                 </select>
                 <input type="submit"/>
