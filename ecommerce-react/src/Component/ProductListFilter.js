@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 class ProductListFilter extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            categories:[]
+        this.state = {
+            categories: []
         };
     }
 
@@ -17,8 +17,8 @@ class ProductListFilter extends Component {
 
     render() {
         const categoryOptions = this.state.categories.map(
-            category => <option value={category['@id']}>{category.label}</option>
-            );
+            category => <option key={category['@id']} value={category['@id']}>{category.label}</option>
+        );
         return (
             <form>
                 <select onChange={event => this.props.onChange(event)}>

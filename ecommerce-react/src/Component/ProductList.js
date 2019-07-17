@@ -6,9 +6,9 @@ import ProductListFilter from "./ProductListFilter";
 class ProductList extends Component {
     constructor(props) {
         super(props);
-        this.state={
-          products:[],
-            visibleProducts:[]
+        this.state = {
+            products: [],
+            visibleProducts: []
         };
     }
 
@@ -21,25 +21,30 @@ class ProductList extends Component {
                 visibleProducts: data["hydra:member"]
             }));
     }
+
     /*
     * Mettre à jour la liste des produits en fonction du filtre
     * */
-    updateFilters (event) {
+    updateFilters(event) {
 
         const category = event.target.value;
         let products = this.state.products;
 
-        if(category){
-            products=products.filter(product => product.category['@id'] === category);
+        if (category) {
+            products = products.filter(product => product.category['@id'] === category);
         }
 
         this.setState({
-            visibleProducts : products
+            visibleProducts: products
         });
     }
 
     render() {
-        const productThumbs = this.state.visibleProducts.map(product => <ProductThumb key={product['@id']} product={product}/>);
+        const productThumbs = this.state.visibleProducts.map(
+            product => <ProductThumb key={product['@id']}
+                                     product={product}
+                                     addToCart={product => this.props.addToCart(product)}/>
+        );
 
         return (
             <div>

@@ -9,11 +9,11 @@ class ProductThumb extends Component {
 
         return (
             <div className='product-thumb'>
-                <img src={process.env.REACT_APP_UPLOADS + picture }
-                     alt={product.name}/>
+                <img src={process.env.REACT_APP_UPLOADS + '/' + picture} alt={product.name}/>
                 <h3>{product.name}</h3>
-                <p>Prix: {product.price} €</p>
-                <p>Catégorie: {product.category.label}</p>
+                <p>Prix : {product.price} €</p>
+                <p>Catégorie : {product.category.label}</p>
+                <button onClick={() => this.props.addToCart(product)}>Ajouter au panier</button>
             </div>
         );
     }
