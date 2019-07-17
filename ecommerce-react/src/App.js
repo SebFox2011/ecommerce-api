@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import './App.css';
 import ProductList from "./Component/ProductList";
 import Cart from "./Component/Cart"
+import {Route} from "react-router-dom";
+import Homepage from "./Component/Homepage";
+
 
 class App extends Component {
     constructor(props) {
@@ -33,7 +36,7 @@ class App extends Component {
         if (cartProduct.qte == 0) {
             this.setState({
                 cartProducts: this.state.cartProducts.filter(p => p['@id'] !== cartProduct['@id'])
-        });
+            });
 
         } else {
             this.setState({
@@ -46,11 +49,15 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <ProductList addToCart={cartProducts => this.addToCart(cartProducts)}/>
-                <Cart products={this.state.cartProducts}
-                      addToCart={product => this.addToCart(product)}
-                      removeFromCart={product => this.removeFromCart(product)}
-                />
+                <Route path="/" exact component={Homepage}/>
+                <Route path="/Products" render={() =>
+                    <ProductList addToCart={cartProducts => this.addToCart(cartProducts)}/>}/>
+                <Route path="/Products" render={() =>
+                    <Cart products={this.state.cartProducts}
+                          addToCart={product => this.addToCart(product)}
+                          removeFromCart={product => this.removeFromCart(product)}
+                    />}/>
+
             </div>
         );
     }
