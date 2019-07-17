@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ProductThumb from "./ProductThumb";
 import "./ProductList.scss"
+import ProductListFilter from "./ProductListFilter";
 
 class ProductList extends Component {
     constructor(props) {
@@ -18,11 +19,14 @@ class ProductList extends Component {
     }
 
     render() {
-        const productThumbs = this.state.products.map(product => <ProductThumb key={product.id} product={product}/>);
+        const productThumbs = this.state.products.map(product => <ProductThumb key={product['@id']} product={product}/>);
 
         return (
-            <div className="Product-list">
-                {productThumbs}
+            <div>
+                <ProductListFilter/>
+                <div className="Product-list">
+                    {productThumbs}
+                </div>
             </div>
         );
     }

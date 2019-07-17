@@ -12,3 +12,5 @@ npm start
 oublier de relancer le server npm
 5 npm install node-sass pour avoir acces sass
 6 ajout de scss sur ProductThumb et ProductList
+7 ajout des catégories pour chaque produit
+8
