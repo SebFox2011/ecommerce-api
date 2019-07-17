@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ddc0b43-488d-4bef-a12a-8c0c9554bf82" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/CartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/CartItem.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="122">
+              <caret line="34" column="116" lean-forward="true" selection-start-line="34" selection-start-column="116" selection-end-line="34" selection-end-column="116" />
               <folding>
                 <element signature="e#1#40#0" expanded="true" />
               </folding>
@@ -40,28 +42,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.css">
+        <entry file="file://$PROJECT_DIR$/src/Component/Cart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Component/CartItem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Component/ProductList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="699">
-              <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+            <state relative-caret-position="288">
+              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -70,10 +54,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Component/Cart.js">
+        <entry file="file://$PROJECT_DIR$/src/Component/CartItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+            <state relative-caret-position="162">
+              <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Component/ProductList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -96,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Component/ProductListFilter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
+            <state relative-caret-position="414">
               <caret line="23" column="70" lean-forward="true" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
             </state>
           </provider>
@@ -132,10 +125,10 @@
         <option value="$PROJECT_DIR$/src/Component/ProductThumb.js" />
         <option value="$PROJECT_DIR$/src/Component/ProductList.js" />
         <option value="$PROJECT_DIR$/src/Component/ProductListFilter.js" />
-        <option value="$PROJECT_DIR$/src/Component/Cart.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Component/CartItem.js" />
+        <option value="$PROJECT_DIR$/src/Component/Cart.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
   </component>
@@ -211,12 +204,12 @@
       <updated>1563285114053</updated>
       <workItem from="1563285117174" duration="3937000" />
       <workItem from="1563347181066" duration="2924000" />
-      <workItem from="1563354431442" duration="6911000" />
+      <workItem from="1563354431442" duration="8654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13772000" />
+    <option name="totallyTimeSpent" value="15515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="754" extended-state="0" />
@@ -236,7 +229,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32930514" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.18731117" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -296,9 +289,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Component/ProductListFilter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
+        <state relative-caret-position="414">
           <caret line="23" column="70" lean-forward="true" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
         </state>
       </provider>
@@ -313,27 +313,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Cart.js">
+    <entry file="file://$PROJECT_DIR$/src/Component/ProductList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        <state relative-caret-position="173">
+          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
+    <entry file="file://$PROJECT_DIR$/src/Component/CartItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="162">
+          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/ProductList.js">
+    <entry file="file://$PROJECT_DIR$/src/Component/Cart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+        <state relative-caret-position="288">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -342,18 +342,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="122">
+          <caret line="34" column="116" lean-forward="true" selection-start-line="34" selection-start-column="116" selection-end-line="34" selection-end-column="116" />
           <folding>
             <element signature="e#1#40#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/CartItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
         </state>
       </provider>
     </entry>

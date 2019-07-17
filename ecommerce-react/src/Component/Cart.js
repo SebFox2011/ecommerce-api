@@ -5,13 +5,15 @@ class Cart extends Component {
 
     render() {
         const items = this.props.products.map(
-            product => <CartItem key={product['@id']} product={product} addToCart={product => this.props.addToCart(product)} />
+            product => <CartItem key={product['@id']} product={product}
+                                 addToCart={product => this.props.addToCart(product)}
+                                 removeFromCart={product => this.props.removeFromCart(product)}/>
         );
 
         return (
             <div>
                 <h2>Panier</h2>
-                    {items}
+                {items}
             </div>
         );
     }

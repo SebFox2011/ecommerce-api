@@ -17,7 +17,6 @@ class App extends Component {
             product.qte++;
             this.setState({
                 cartProducts: this.state.cartProducts.map(p => p['@id'] === cartProduct['@id'] ? cartProduct : p)
-
             });
 
         } else {
@@ -26,15 +25,32 @@ class App extends Component {
                 cartProducts: [product, ...this.state.cartProducts]
             });
         }
+    }
 
+    removeFromCart(product) {
+        let cartProduct = this.state.cartProducts.find(p => p['@id'] === product['@id']);
+        product.qte--;
+        if (cartProduct.qte == 0) {
+            this.setState({
+                cartProducts: this.state.cartProducts.filter(p => p['@id'] !== cartProduct['@id'])
+        });
 
+        } else {
+            this.setState({
+                cartProducts: this.state.cartProducts.map(p => p['@id'] === cartProduct['@id'] ? cartProduct : p)
+            });
+
+        }
     }
 
     render() {
         return (
             <div className="App">
                 <ProductList addToCart={cartProducts => this.addToCart(cartProducts)}/>
-                <Cart products={this.state.cartProducts} addToCart={product => this.addToCart(product)}/>
+                <Cart products={this.state.cartProducts}
+                      addToCart={product => this.addToCart(product)}
+                      removeFromCart={product => this.removeFromCart(product)}
+                />
             </div>
         );
     }
