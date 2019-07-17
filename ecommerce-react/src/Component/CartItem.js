@@ -5,6 +5,7 @@ class CartItem extends Component {
         return (
             <div>
                 {this.props.product.name}
+                <p>Quantité: {this.props.product.qte}</p>
             </div>
         );
     }

@@ -12,15 +12,28 @@ class App extends Component {
     }
 
     addToCart(product) {
-        this.setState({
-            cartProducts: [product, ...this.state.cartProducts]
-        });
+        let cartProduct = this.state.cartProducts.find(p => p['@id'] === product['@id']);
+        if (cartProduct) {
+            product.qte++;
+            this.setState({
+                cartProducts: this.state.cartProducts.map(p => p['@id'] === cartProduct['@id'] ? cartProduct : p)
+
+            });
+
+        } else {
+            product.qte = 1;
+            this.setState({
+                cartProducts: [product, ...this.state.cartProducts]
+            });
+        }
+
+
     }
 
     render() {
         return (
             <div className="App">
-                <ProductList addToCart={cartProducts =>this.addToCart(cartProducts)}/>
+                <ProductList addToCart={cartProducts => this.addToCart(cartProducts)}/>
                 <Cart products={this.state.cartProducts}/>
             </div>
         );
