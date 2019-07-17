@@ -34,7 +34,7 @@ class App extends Component {
         return (
             <div className="App">
                 <ProductList addToCart={cartProducts => this.addToCart(cartProducts)}/>
-                <Cart products={this.state.cartProducts}/>
+                <Cart products={this.state.cartProducts} addToCart={product => this.addToCart(product)}/>
             </div>
         );
     }

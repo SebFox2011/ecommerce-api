@@ -6,6 +6,7 @@ class CartItem extends Component {
             <div>
                 {this.props.product.name}
                 <p>Quantité: {this.props.product.qte}</p>
+                <button onClick={() => this.props.addToCart(this.props.product)}>+</button>
             </div>
         );
     }
