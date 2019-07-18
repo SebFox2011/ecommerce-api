@@ -10,13 +10,23 @@ class Cart extends Component {
                                  removeFromCart={product => this.props.removeFromCart(product)}/>
         );
 
-        return (
-            <div className="text-center justify-content-center">
-                <h2 >Panier</h2>
-                {items}
-            </div>
-        );
-    }
+        /*let total=0;
+        for (let i=0;i<this.props.products.length;i++){
+            total += this.props.products[i].price;
+        }*/
+
+        const total = this.props.products.reduce((accumulator, product) => accumulator + product.price * product.qte, 0);
+
+    return(
+
+<div className="text-center justify-content-center">
+<h2 >Panier</h2>
+<p>Montant total: {total}</p>
+{items}
+</div>
+)
+    ;
+}
 }
 
 export default Cart;
