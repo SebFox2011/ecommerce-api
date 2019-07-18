@@ -4,19 +4,16 @@ import {NavLink} from "react-router-dom";
 class MainMenu extends Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <ul>
-                    <li>
-                        <NavLink exact to="/" activeClassName="active">Accueil</NavLink>
-                    </li>
-                    <li>
-                        <NavLink exact to="/products" activeClassName="active">Liste des produits</NavLink>
-                    </li>
-                    <li>
-                        <NavLink exact to="/newProduct" activeClassName="active">Nouveau produit</NavLink>
-                    </li>
-                </ul>
-            </nav>
+            <React.Fragment>
+                <h1 className="text-center">DigitalShop</h1>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light justify-content-around">
+                    <NavLink className="btn btn-dark" exact to="/" activeClassName="active">Accueil</NavLink>
+                    <NavLink className="btn btn-dark" exact to="/products" activeClassName="active">Liste des
+                        produits</NavLink>
+                    <NavLink className="btn btn-dark" exact to="/newProduct" activeClassName="active">Nouveau
+                        produit</NavLink>
+                </nav>
+            </React.Fragment>
         );
     }
 }

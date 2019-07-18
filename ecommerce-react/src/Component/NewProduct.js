@@ -20,12 +20,17 @@ class NewProduct extends Component {
         fetch(process.env.REACT_APP_API + 'categories')
             .then(response => response.json())
             .then(data => this.setState({
-                categories: data["hydra:member"]
+                categories: data["hydra:member"],
+                product: {
+                    ...this.state.product,// reprend le produit déjà présent dans le state avec le spread operator
+                    category: data["hydra:member"][0]['@id']//ajouter ou modifier la clé "category"
+                },
+                success: false
             }));
     }
 
     handleChange(event) {
-        let product = Object.assign({}, this.state.product);
+        let product = Object.assign({}, this.state.product);//Crée une copie de l'objet
         product[event.target.name] = event.target.value;
         this.setState({product: product});
     }
@@ -40,7 +45,11 @@ class NewProduct extends Component {
             body: JSON.stringify(this.state.product)
         })
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(data => {
+                this.setState({success: true});
+                setTimeout(() => this.setState({success: false}), 3000);
+
+            });
     }
 
     render() {
@@ -49,9 +58,13 @@ class NewProduct extends Component {
             category => <option key={category["@id"]} value={category["@id"]}>{category.label}</option>
         );
 
+        const alert = (this.state.success) ?
+            <p className="alert alert-primary" role="alert">Produit ajouté avec succes !</p> : null
+
         return (
-            <div className="text-left">
+            <div className="text-center">
                 <h1>Ajouter un produit</h1>
+                {alert}
                 <form onSubmit={event => this.handleSubmit(event)}>
                     <p><input type="text" id="name" name="name" value={product.name} placeholder="Nom"
                               onChange={event => this.handleChange(event)}/></p>

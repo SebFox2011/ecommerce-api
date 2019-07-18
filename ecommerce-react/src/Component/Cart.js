@@ -11,8 +11,8 @@ class Cart extends Component {
         );
 
         return (
-            <div>
-                <h2>Panier</h2>
+            <div className="text-center justify-content-center">
+                <h2 >Panier</h2>
                 {items}
             </div>
         );
