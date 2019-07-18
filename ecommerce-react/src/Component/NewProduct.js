@@ -48,6 +48,14 @@ class NewProduct extends Component {
             .then(data => {
                 this.setState({success: true});
                 setTimeout(() => this.setState({success: false}), 3000);
+                this.setState({
+                    product: {
+                        name: "",
+                        category: "",
+                        price: 0,
+                        description: ""
+                    }
+                })
 
             });
     }
@@ -62,7 +70,7 @@ class NewProduct extends Component {
             <p className="alert alert-primary" role="alert">Produit ajouté avec succes !</p> : null
 
         return (
-            <div className="text-center">
+            <div className="container text-center">
                 <h1>Ajouter un produit</h1>
                 {alert}
                 <form onSubmit={event => this.handleSubmit(event)}>
