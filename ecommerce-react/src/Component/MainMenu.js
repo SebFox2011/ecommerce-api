@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 class MainMenu extends Component {
     render() {
         return (
-            <nav>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <ul>
                     <li>
                         <NavLink exact to="/" activeClassName="active">Accueil</NavLink>

@@ -4,8 +4,9 @@ import ProductList from "./Component/ProductList";
 import Cart from "./Component/Cart"
 import {Route} from "react-router-dom";
 import Homepage from "./Component/Homepage";
-import MainMenu from "./Component/MainMenu";
 import Product from "./Component/Product";
+import Header from "./Component/header";
+import Footer from "./Component/Footer";
 
 
 class App extends Component {
@@ -35,7 +36,7 @@ class App extends Component {
     removeFromCart(product) {
         let cartProduct = this.state.cartProducts.find(p => p['@id'] === product['@id']);
         product.qte--;
-        if (cartProduct.qte == 0) {
+        if (cartProduct.qte === 0) {
             this.setState({
                 cartProducts: this.state.cartProducts.filter(p => p['@id'] !== cartProduct['@id'])
             });
@@ -50,9 +51,9 @@ class App extends Component {
 
     render() {
         return (
-
             <div className="App">
-                <MainMenu/>
+                <Header/>
+
                 <Route path="/" exact component={Homepage}/>
 
                 <Route path="/products" exact render={() =>
@@ -64,7 +65,7 @@ class App extends Component {
                     <Cart products={this.state.cartProducts}
                           addToCart={product => this.addToCart(product)}
                           removeFromCart={product => this.removeFromCart(product)}/>}/>
-
+                <Footer/>
             </div>
         );
     }

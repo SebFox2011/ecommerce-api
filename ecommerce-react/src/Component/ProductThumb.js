@@ -12,13 +12,13 @@ class ProductThumb extends Component {
 
 
         return (
-            <div className='product-thumb'>
+            <div className='product-thumb text-center mb-4 shadow-sm rounded bg-primary album'>
                 <img src={process.env.REACT_APP_UPLOADS + '/' + picture} alt={product.name}/>
                 <h3>{product.name}</h3>
                 <p>Prix : {product.price} €</p>
                 <p>Catégorie : {product.category.label}</p>
                 <button onClick={() => this.props.addToCart(product)}>Ajouter au panier</button>
-                <Link to={'/products/'+productId}>Afficher </Link>
+                <Link to={'/products/' + productId}>Afficher </Link>
             </div>
         );
     }
