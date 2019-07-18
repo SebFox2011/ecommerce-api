@@ -11,7 +11,8 @@ class NewProduct extends Component {
                 category: "",
                 price: 0,
                 description: ""
-            }
+            },
+            success:false
         };
     }
 
@@ -24,8 +25,7 @@ class NewProduct extends Component {
                 product: {
                     ...this.state.product,// reprend le produit déjà présent dans le state avec le spread operator
                     category: data["hydra:member"][0]['@id']//ajouter ou modifier la clé "category"
-                },
-                success: false
+                }
             }));
     }
 
