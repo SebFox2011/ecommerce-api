@@ -10,7 +10,10 @@ class MainMenu extends Component {
                         <NavLink exact to="/" activeClassName="active">Accueil</NavLink>
                     </li>
                     <li>
-                        <NavLink exact to="/products" activeClassName="active">Produits</NavLink>
+                        <NavLink exact to="/products" activeClassName="active">Liste des produits</NavLink>
+                    </li>
+                    <li>
+                        <NavLink exact to="/newProduct" activeClassName="active">Nouveau produit</NavLink>
                     </li>
                 </ul>
             </nav>

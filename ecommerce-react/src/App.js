@@ -8,6 +8,7 @@ import Product from "./Component/Product";
 import Header from "./Component/header";
 import Footer from "./Component/Footer";
 import NotFound from "./Component/NotFound";
+import NewProduct from "./Component/NewProduct";
 
 
 class App extends Component {
@@ -59,7 +60,7 @@ class App extends Component {
 
                     <Route path="/products" exact render={() =>
                         <ProductList addToCart={cartProducts => this.addToCart(cartProducts)}/>}/>
-
+                    <Route path="/newProduct" component={NewProduct}/>
                     <Route path="/products/:id"
                            render={routeProps => <Product {...routeProps} addToCart={product => this.addToCart(product)}/>}/>
 
@@ -70,6 +71,7 @@ class App extends Component {
                     <Cart products={this.state.cartProducts}
                           addToCart={product => this.addToCart(product)}
                           removeFromCart={product => this.removeFromCart(product)}/>}/>
+
                 <Footer/>
             </div>
         );
