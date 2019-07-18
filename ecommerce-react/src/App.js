@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import './App.css';
 import ProductList from "./Component/ProductList";
 import Cart from "./Component/Cart"
-import {Route} from "react-router-dom";
+import {Route,Switch} from "react-router-dom";
 import Homepage from "./Component/Homepage";
 import Product from "./Component/Product";
 import Header from "./Component/header";
 import Footer from "./Component/Footer";
+import NotFound from "./Component/NotFound";
 
 
 class App extends Component {
@@ -53,14 +54,18 @@ class App extends Component {
         return (
             <div className="App">
                 <Header/>
+                <Switch>
+                    <Route path="/" exact component={Homepage}/>
 
-                <Route path="/" exact component={Homepage}/>
+                    <Route path="/products" exact render={() =>
+                        <ProductList addToCart={cartProducts => this.addToCart(cartProducts)}/>}/>
 
-                <Route path="/products" exact render={() =>
-                    <ProductList addToCart={cartProducts => this.addToCart(cartProducts)}/>}/>
+                    <Route path="/products/:id"
+                           render={routeProps => <Product {...routeProps} addToCart={product => this.addToCart(product)}/>}/>
 
-                <Route path="/products/:id" component={Product}/>
-
+                    <Route path="/404" component={NotFound}/>
+                    <Route component={NotFound}/>
+                </Switch>
                 <Route path="/products" render={() =>
                     <Cart products={this.state.cartProducts}
                           addToCart={product => this.addToCart(product)}

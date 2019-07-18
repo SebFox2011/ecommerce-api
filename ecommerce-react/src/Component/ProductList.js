@@ -49,7 +49,7 @@ class ProductList extends Component {
         return (
             <div>
                 <ProductListFilter onChange={event => this.updateFilters(event)}/>
-                <div className="Product-list">
+                <div className="Product-list text-white">
                     {productThumbs}
                 </div>
             </div>

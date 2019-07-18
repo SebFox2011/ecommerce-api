@@ -4,11 +4,13 @@ import MainMenu from "./MainMenu";
 class Header extends Component {
     render() {
         return (
-            <div className="container">
-                <div className="Row col-12">
-                    <MainMenu/>
+            <header>
+                <div className="container">
+                    <div className="Row col-12">
+                        <MainMenu/>
+                    </div>
                 </div>
-            </div>
+            </header>
         );
     }
 }
